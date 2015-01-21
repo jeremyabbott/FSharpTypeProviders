@@ -10,7 +10,8 @@ let data = FreebaseDataWithKey.GetDataContext()
 // Suddenly I can explore data available in Freebase by type "data."
 
 let getBassists ()  =
-    let items = data.``Arts and Entertainment``.Music.Bassists |> Seq.toList
+    let items = data.``Arts and Entertainment``.Music.Bassists
+    items
 
-    
-    printfn "%A" items
+let printBassist bassist =
+    printfn "%A" bassist

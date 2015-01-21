@@ -1,6 +1,7 @@
 ﻿// Learn more about F# at http://fsharp.net
 // See the 'F# Tutorial' project for more help.
 
+open SeqOperations
 open FreebaseDb
 open NLGLFF
 open Northwind
@@ -13,12 +14,10 @@ open Northwind
 [<EntryPoint>]
 let main argv = 
     
-//    printfn "%d" (add1Times2 5)
+//    FreebaseDb.getBassists () |> SeqOperations.printSeq FreebaseDb.printBassist
 
-//    FreebaseDb.getBassists ()
-    NLGLFF.getSponsorsFor 2014 |> NLGLFF.printSponsors |> ignore
-      
-    let categories = Northwind.getCategories ()
-    printfn "%A" categories
+//    NLGLFF.getSponsorsFor 2014 |> SeqOperations.printSeq NLGLFF.printSponsor
+
+//    Northwind.getCategories () |> SeqOperations.printSeq Northwind.printCategory
 
     0 // return an integer exit code
